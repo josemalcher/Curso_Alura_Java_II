@@ -1,11 +1,13 @@
 package aula5;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	protected String nome;
 	protected String cpf;
 	protected double salario;
+	private int senha;
 	
+	public abstract double getBonus();
 	//public abstract double getBonificacao();
 
 	public String getNome() {
@@ -30,6 +32,11 @@ public class Funcionario {
 
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+
+	public boolean autentica(int senha) {
+		
+		return this.senha == senha;
 	}
 	
 	
