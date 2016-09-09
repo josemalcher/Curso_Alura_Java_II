@@ -10,6 +10,13 @@ public abstract class Funcionario {
 	public abstract double getBonus();
 	//public abstract double getBonificacao();
 
+	public boolean autentica(int senha) {
+		
+		return this.senha == senha;
+	}
+	
+	//get e sets
+	
 	public String getNome() {
 		return nome;
 	}
@@ -34,10 +41,7 @@ public abstract class Funcionario {
 		this.salario = salario;
 	}
 
-	public boolean autentica(int senha) {
-		
-		return this.senha == senha;
-	}
+	
 	
 	
 }
