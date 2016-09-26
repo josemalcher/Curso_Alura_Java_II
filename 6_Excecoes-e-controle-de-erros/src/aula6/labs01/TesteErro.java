@@ -9,7 +9,11 @@ public class TesteErro {
 
 	static void metodo1() {
 		System.out.println("inicio do metodo1");
-		metodo2();
+		try {
+			metodo2();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("ERRO metodo 2 - for" + e);
+		}
 		System.out.println("fim do metodo1");
 	}
 
@@ -18,12 +22,10 @@ public class TesteErro {
 		int[] array = new int[10];
 
 		for (int i = 0; i <= 15; i++) {
-			try {
-				array[i] = i;
-				System.out.println(i);
-			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.println("ERRO metodo 2 - for" + e);
-			}
+
+			array[i] = i;
+			System.out.println(i);
+
 		}
 
 		System.out.println("fim do metodo2");
