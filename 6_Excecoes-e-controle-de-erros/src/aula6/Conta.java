@@ -17,12 +17,12 @@ public class Conta {
 	}
 	
 
-	public void saca(double valorSacar){
+	public void saca(double valorSacar) throws Exception{
 		if(saldo >= valorSacar){
 			this.saldo -= valorSacar;
 			
 		}else{
-			throw new RuntimeException("Saldo insuficiente");
+			throw new Exception("Saldo insuficiente");
 		}
 	}
 	
