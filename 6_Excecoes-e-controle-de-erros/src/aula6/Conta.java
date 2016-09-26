@@ -22,7 +22,7 @@ public class Conta {
 			this.saldo -= valorSacar;
 			
 		}else{
-			throw new Exception("Saldo insuficiente");
+			throw new SaldoInsuficienteException(saldo);
 		}
 	}
 	

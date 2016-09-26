@@ -6,11 +6,17 @@ public class TestaConta {
 		
 		Conta joao = new Conta();
 		joao.deposita(50.0);
-		//try{
+		try{
 		joao.saca(300.0);
-		//}catch(Exception e){
-			System.out.println("Não há SALDO!");
-		//}
+		}
+		catch(SaldoInsuficienteException e){
+			System.out.println("SALDO INSUFICIENTE "+ e.getSaldoAtual());
+		}
+		
+		catch(Exception e){
+			//System.out.println("Não há SALDO!");
+			System.out.println("Um outro ERRO QUALQUER");
+		}
 		System.out.println(joao.getSaldo());
 		
 		
