@@ -9,12 +9,12 @@ public class TestaConta {
 		try {
 			joao.deposita(-10);
 		} catch (IllegalArgumentException e) {
-			System.out.println("VALOR NEGATIVO - VALOR INVALIDO");
+			System.out.println("ALERTA "+ e.getMessage());
 		}
 		try {
 			joao.saca(300.0);
 		} catch (SaldoInsuficienteException e) {
-			System.out.println("SALDO INSUFICIENTE " + e.getSaldoAtual());
+			System.out.println("ALERTA "+ e.getMessage());
 		}
 
 		catch (Exception e) {
